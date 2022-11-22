@@ -1,6 +1,6 @@
 # Udacity Frontend Web Development Nanodegree - Landing Page Project
 
-![Project ScreenCast](./ScreenCast/Project.webm)
+[Project ScreenCast](./ScreenCast/Project.webm)
 
 ## Description
 
