@@ -37,8 +37,6 @@ let currentPosition = 0;
  *
  */
 
-
-
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -48,7 +46,7 @@ let currentPosition = 0;
 // build the nav
 sections.forEach((element, index) => {
   let sectionName = element.getAttribute("data-nav");
-  let toOffSection = element.offsetTop + 30;
+  let toOffSection = element.offsetTop;
   let li = document.createElement("li");
   li.setAttribute("class", "menu__link" + index);
   li.setAttribute("id", "menu__link" + index);
@@ -57,11 +55,11 @@ sections.forEach((element, index) => {
 });
 
 // Add class 'active' to section when near top of viewport
-document.addEventListener("scroll", () => {
+document.addEventListener("click", () => {
   currentPosition = this.scrollY;
   sectionsPosition = [];
   sections.forEach((element) =>
-    sectionsPosition.push(element.getBoundingClientRect().top + 50)
+    sectionsPosition.push(element.getBoundingClientRect().top + 5)
   );
 
   let addIndex = sectionsPosition.findIndex((element) => element > 0);
