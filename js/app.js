@@ -78,7 +78,9 @@ document.addEventListener("click", () => {
 
 // Scroll to anchor ID using scrollTO event
 function scrollToSection(sectionID) {
-  window.scrollTo(0, sectionID);
+  // event.preventDefault();
+  // window.scrollTo(0, sectionID);
+  window.scrollTo({ top: sectionID, behavior: "smooth" });
 }
 
 /**
